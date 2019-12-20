@@ -48,5 +48,3 @@ function findNode(nodeName, vertices){
     return vertex.name == nodeName;
   })
 }
-
-
