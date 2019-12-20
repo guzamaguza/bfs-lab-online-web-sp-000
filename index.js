@@ -7,7 +7,7 @@ function bfs(rootNode, vertices, edges){
     let currentNode = discoveredList.shift(); //removes first element and uses it in the current iteration
 
 //find adjacent nodes
-    let adjacentNodes = findAdjacentNodes(currentNode, vertices, edges); //finds adjacent nodes to current node
+    let adjacentNodes = findAdjacentNodes(currentNode.name, vertices, edges); //finds adjacent nodes to current node
     discoverOrder = discoverOrder.concat(adjacentNodes);  //adds adjacent node to discoverOrder to keep track of order found
 //process adjacent nodes and adds them to temporary iteration array (discoveredList)
     markDistanceAndPredecessor(currentNode, adjacentNodes);  //maps array of the adjacent nodes to the current node with this function
