@@ -34,6 +34,7 @@ function markDistanceAndPredecessor(predecessor, adjacentNodes){
   })
 }
 
+
 /*
 function addVertexToQueue(node){
   return queue.push(node)
