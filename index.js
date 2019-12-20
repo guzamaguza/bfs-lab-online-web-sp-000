@@ -11,7 +11,7 @@ function bfs(rootNode, vertices, edges){
     discoverOrder = discoverOrder.concat(adjacentNodes);  //adds adjacent node to discoverOrder to keep track of order found
 //process adjacent nodes and adds them to temporary iteration array (discoveredList)
     markDistanceAndPredecessor(currentNode, adjacentNodes);  //maps array of the adjacent nodes to the current node with this function
-    dicoveredList = discoveredList.concat(adjacentNodes);  //adds adjacent nodes to the discovered list (once they've been mapped and processed)
+    discoveredList = discoveredList.concat(adjacentNodes);  //adds adjacent nodes to the discovered list (once they've been mapped and processed)
   }
   return discoverOrder
 }
