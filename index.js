@@ -34,9 +34,12 @@ function markDistanceAndPredecessor(predecessor, adjacentNodes){
   })
 }
 
+/*
 function addVertexToQueue(node){
   return queue.push(node)
 }
+*/
+
 
 //returns vertices that have the given node name
 function findNode(nodeName, vertices){
