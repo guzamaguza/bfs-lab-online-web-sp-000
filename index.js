@@ -7,7 +7,7 @@ function bfs(rootNode, vertices, edges){
     let currentNode = discoveredList.shift(); //removes first element and uses it in the current iteration
 
 //find adjacent nodes
-    let adjacentNodes = findAdjacentNodes(currentNode.name, vertices, edges); //finds adjacent nodes to current node
+    let adjacentNodes = findAdjacent(currentNode.name, vertices, edges); //finds adjacent nodes to current node
     discoverOrder = discoverOrder.concat(adjacentNodes);  //adds adjacent node to discoverOrder to keep track of order found
 //process adjacent nodes and adds them to temporary iteration array (discoveredList)
     markDistanceAndPredecessor(currentNode, adjacentNodes);  //maps array of the adjacent nodes to the current node with this function
@@ -17,7 +17,7 @@ function bfs(rootNode, vertices, edges){
 }
 
 //should return an array of adjacent nodes
-function findAdjacentNodes(nodeName, vertices, edges){
+function findAdjacent(nodeName, vertices, edges){
   //the following returns an array for all the elements that pass the test in the function (vertex is next to edge)
   return edges.filter(function(edge){return edge.includes(nodeName)}) //first filters edges that have the nodeNames in them
               .map(function(edge){return edge.filter(function(node){return (node != nodeName)})[0]}) //maps edges where nodes are not equal in name
